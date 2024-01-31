@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>F1 Account</title>
+    <link rel="icon" th:href="@{img/f1webicon.png}">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+    <nav>
+        <a href="/index.html">Home</a>
+        <a href="/contact.html">Contact</a>
+        <a href="">Account</a>
+    </nav>
+    <main class="account_main" th:object="users" method="post">
+<!--        <form th:action="@{/account}">-->
+<!--            <input name="nick" type="text" th:value="*{nick}">-->
+<!--            <input name="password" type="text" th:value="*{password}">-->
+<!--            <input name="mail" type="text" th:value="*{mail}">-->
+            <a href="/greeting"><input >Login</a>
+<!--        </form>-->
+    </main>
+</body>
+</html>

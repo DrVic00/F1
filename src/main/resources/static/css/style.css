@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Faster+One&family=Josefin+Sans&family=Roboto&display=swap');
+
+body {
+    background-color: rgb(246, 242, 242);
+    margin: 0;
+}
+
+/*------------------------------NAVBAR-----------------------------*/
+
+nav {
+    top: 50%;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    background: #181717;
+    height: 70px;
+    width: 100%;
+    animation: animateleft 04s;
+}
+
+nav > a {
+    color: #eff3f3;
+    transition: font-size 1s;
+    font-size: 30px;
+}
+
+nav > a:hover {
+    font-size: 160%;
+}
+
+@keyframes animateleft {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*------------------------------MAIN BLOCK-----------------------------*/
+
+main {
+    background-color: rgb(246, 242, 242);
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*------------------------------[index.html] MAIN BLOCK-----------------------------*/
+
+
+img {
+    width: 100%;
+    height: fit-content;
+    opacity: 0.3;
+    animation: opac 0.4s;
+}
+
+@keyframes opac {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.3;
+    }
+
+}
+
+main > h1 {
+    font-family: "Abril+Fatface", "Faster+One", "Josefin+Sans", "Roboto";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #262525;
+    font-size: 80px;
+    position: absolute;
+    animation: animatetop 0.4s
+}
+
+@keyframes animatetop {
+    from {
+        top: 400px;
+        opacity: 0
+    }
+    to {
+        top: 545px;
+        opacity: 1
+    }
+}
+
+main > h2 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 60px;
+    color: #262525;
+    text-align: center;
+}
+
+/*------------------------------[index.html] INFO BLOCK-----------------------------*/
+
+.info_block {
+    height: 400px;
+    background-color: rgb(246, 242, 242);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*------------------------------[contact.html] MAIN BLOCK-----------------------------*/
+
+
+table {
+    border-style: none;
+    color: #181717;
+    font-size: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*------------------------------[account.html] MAIN BLOCK-----------------------------*/
+
+.account_main{
+    display: flex;
+    justify-content: center;
+}
+
+.account_main > a {
+
+    margin-top: 20%;
+    align-items: center;
+    background-color: #fa0000;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    justify-content: center;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+.account_main > a:hover {
+    background-color: #c80000;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+}
+
+

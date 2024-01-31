@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>F1 Greeting</title>
+  <link rel="icon" th:href="@{img/f1webicon.png}">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" th:href="@{/css/greetingStyle.css}"/>
+</head>
+<body>
+    <div class="side_navbar">
+        <p th:text="|Logged as ${nick}|" />
+        <a href="/index.html">Wylogowanie</a>
+    </div>
+</body>
+</html>

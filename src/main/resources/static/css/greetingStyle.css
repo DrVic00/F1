@@ -1,0 +1,44 @@
+.side_navbar{
+    height: 100vh;
+    width: 20vh;
+    background-color: #171616;
+    box-shadow: -10px -10px 20px -6px brown inset;
+    text-align: center;
+    border-right-style: groove;
+    border-color: #b40f0f;
+    color: #eff3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-choose{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.f1-car-block{
+    margin-top: 25%;
+    margin-bottom: 25%;
+}
+
+.f1-driver-block{
+    margin-top: 25%;
+    margin-bottom: 25%;
+}
+
+body{
+    margin: 0;
+    background-color: rgb(246, 242, 242);
+    display: flex;
+}
+
+.side_navbar > p{
+    margin-top: 50px;
+}
+
+.side_navbar > a{
+    margin-bottom: 50px;
+}
