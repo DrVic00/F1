@@ -22,6 +22,7 @@ nav > a {
     color: #eff3f3;
     transition: font-size 1s;
     font-size: 30px;
+    text-decoration: none;
 }
 
 nav > a:hover {
@@ -41,51 +42,42 @@ nav > a:hover {
 
 main {
     background-color: rgb(246, 242, 242);
-    position: relative;
     margin: 0px;
     padding: 0px;
 }
 
 /*------------------------------[index.html] MAIN BLOCK-----------------------------*/
 
-
-img {
-    width: 100%;
-    height: fit-content;
-    opacity: 0.3;
-    animation: opac 0.4s;
-}
-
-@keyframes opac {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 0.3;
-    }
-
-}
-
-main > h1 {
-    font-family: "Abril+Fatface", "Faster+One", "Josefin+Sans", "Roboto";
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.mainI{
+    background-image: url("../img/f1mainimg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 636px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+
+}
+
+.mainI > h1 {
+    font-family: "Abril+Fatface", "Faster+One", "Josefin+Sans", "Roboto", serif;
+    background-color: rgba(215, 215, 215, 0.56);
+    padding: 30px;
+    border-radius: 10px;
     color: #262525;
     font-size: 80px;
-    position: absolute;
-    animation: animatetop 0.4s
+    animation: animatetop 1s;
 }
 
 @keyframes animatetop {
     from {
-        top: 400px;
         opacity: 0
     }
-    to {
-        top: 545px;
-        opacity: 1
+    90%{
+        opacity: 1;
+        background-color: rgba(215, 215, 215, 0.56);
     }
 }
 
@@ -159,3 +151,57 @@ table {
 }
 
 
+form{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15%;
+    display: inline-grid;
+    row-gap: 10px;
+}
+
+#submit{
+    font-size: 20px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #b40f0f;
+    color: #eff3f3;
+    width: 100%;
+    height: 30px;
+}
+
+/*------------------------------[added-user.html] MAIN BLOCK-----------------------------*/
+
+.added_main{
+    text-align: center;
+    font-family: "Abril+Fatface", "Faster+One", "Josefin+Sans", "Roboto";
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.added_main > h1{
+    font-size: 70px;
+    animation-name: added-text;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.added_main > a{
+    color: #181717;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.added_main > a:hover{
+    animation-name: hover;
+    animation-duration: 1s;
+}
+
+@keyframes added-text {
+    0% {color: #181717}
+    60% {color: #b40f0f}
+    100% {color: #181717}
+}
+
+@keyframes hover {
+    to {color: #262525; font-size: 45px;}
+}

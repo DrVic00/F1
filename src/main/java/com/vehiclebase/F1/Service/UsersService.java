@@ -14,4 +14,6 @@ public class UsersService {
     public Users saveDetails(Users users){
         return usersRepo.save(users);
     }
+
+    public Users fetchDetails(int id_user) { return usersRepo.findById(id_user).orElse(null);}
 }

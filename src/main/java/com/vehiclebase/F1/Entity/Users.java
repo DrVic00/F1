@@ -1,5 +1,4 @@
 package com.vehiclebase.F1.Entity;
-
 import jakarta.persistence.*;
 import lombok.*;
 

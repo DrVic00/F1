@@ -9,26 +9,32 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class GetHelloController {
-
     @Autowired
     private UsersService usersService;
 
-    @PostMapping("/account")
-    public Users login(@RequestBody Users users){ return usersService.saveDetails(users);}
-
     @GetMapping("/account")
-    public String account(){
+    public String account(Model model){
+        model.addAttribute("users", new Users());
         return "account";
     }
 
-    @GetMapping("/greeting")
+    @PostMapping("/account")
+    public String login(@ModelAttribute Users users){
+        usersService.saveDetails(users);
+        usersService.fetchDetails(users.getId_user());
+        return "added_user";
+    }
+
+    @GetMapping("/greeting{id_user}")
     public String greeting(@RequestParam(value = "nick", required = false, defaultValue = "Adam") String nick, Model model) {
         model.addAttribute("nick", nick);
         return "greeting";
     }
 
-//    @GetMapping("/templates/driver_start")
-//    public String driverStart(Model model){
-//        return "/templates/driver_start";
+    //    @GetMapping("/greeting/{id_user}") // do naprawy
+//    public String greeting(@PathVariable int id_user, Model model) {
+//        model.addAttribute("nick", Integer.toString(id_user));
+//        usersService.fetchDetails(id_user);
+//        return "greeting";
 //    }
 }

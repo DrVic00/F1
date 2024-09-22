@@ -13,6 +13,7 @@
 }
 
 .main-choose{
+    text-align: center;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -20,13 +21,14 @@
 }
 
 .f1-car-block{
-    margin-top: 25%;
-    margin-bottom: 25%;
+    padding:0;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .f1-driver-block{
-    margin-top: 25%;
-    margin-bottom: 25%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 body{
@@ -41,4 +43,10 @@ body{
 
 .side_navbar > a{
     margin-bottom: 50px;
+    color: #eff3f3;
+    text-decoration: none;
+}
+
+.side_navbar > a:hover{
+    font-size: larger;
 }

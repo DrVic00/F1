@@ -13,13 +13,16 @@
         <a href="/contact.html">Contact</a>
         <a href="">Account</a>
     </nav>
-    <main class="account_main" th:object="users" method="post">
-<!--        <form th:action="@{/account}">-->
-<!--            <input name="nick" type="text" th:value="*{nick}">-->
-<!--            <input name="password" type="text" th:value="*{password}">-->
-<!--            <input name="mail" type="text" th:value="*{mail}">-->
-            <a href="/greeting"><input >Login</a>
-<!--        </form>-->
+    <main class="account_main">
+        <form th:action="@{/account}" th:object="${users}" method="post">
+            <label>Nick: </label>
+            <input name="nick" type="text" th:field="*{nick}">
+            <label>Password: </label>
+            <input name="password" type="text" th:field="*{password}">
+            <label>Mail: </label>
+            <input name="mail" type="text" th:field="*{mail}">
+            <input id="submit" type="submit" value="Submit">
+        </form>
     </main>
 </body>
 </html>

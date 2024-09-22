@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>F1 Greeting</title>
-    <link rel="icon" th:href="@{img/f1webicon.png}">
+    <link rel="icon" th:href="@{../static/img/f1webicon.png}">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/greetingStyle.css}"/>
 </head>
@@ -14,12 +14,12 @@
     <div class="main-choose">
         <div class="f1-driver-block">
             <a th:href="@{/driver_start}"><img src="/img/f1-driver.png" alt="f1-driver"></a>
-            <a th:href="@{/driver_start}">Driver</a>
+            <p>Driver</p>
         </div>
 
         <div class="f1-car-block">
-            <img th:href="@{/car_start.html}" src="/img/f1-car.png" alt="f1-car">
-            <a th:href="@{/car_start.html}">Vehicle</a>
+            <img th:href="@{/templates/car_start.html}" src="/img/f1-car.png" alt="f1-car">
+            <p>Vehicle</p>
         </div>
     </div>
 </body>
