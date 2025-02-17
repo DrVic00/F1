@@ -18,23 +18,22 @@ public class GetHelloController {
         return "account";
     }
 
+    // make the registration page more useful *add min 8 chars in password and check nick that exist already*
     @PostMapping("/account")
     public String login(@ModelAttribute Users users){
         usersService.saveDetails(users);
-        usersService.fetchDetails(users.getId_user());
-        return "added_user";
+        return "redirect:/greeting?id_user=" + usersService.countAllUsers(); // !what if two users log in the same time! maybe change to short time variable with special number for logging user
     }
 
-    @GetMapping("/greeting{id_user}")
-    public String greeting(@RequestParam(value = "nick", required = false, defaultValue = "Adam") String nick, Model model) {
-        model.addAttribute("nick", nick);
+    // make more with inside side
+    @GetMapping("/greeting")
+    public String greeting(@RequestParam("id_user") int id_user, Model model) {
+        Users logged = usersService.fetchDetails(id_user);
+        if(logged != null){
+            model.addAttribute("nick", logged.getNick());
+        }else{
+            model.addAttribute("nick", "User");
+        }
         return "greeting";
     }
-
-    //    @GetMapping("/greeting/{id_user}") // do naprawy
-//    public String greeting(@PathVariable int id_user, Model model) {
-//        model.addAttribute("nick", Integer.toString(id_user));
-//        usersService.fetchDetails(id_user);
-//        return "greeting";
-//    }
 }

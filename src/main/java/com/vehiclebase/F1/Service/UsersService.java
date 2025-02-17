@@ -16,4 +16,8 @@ public class UsersService {
     }
 
     public Users fetchDetails(int id_user) { return usersRepo.findById(id_user).orElse(null);}
+
+    public long countAllUsers(){
+        return  usersRepo.count();
+    }
 }
